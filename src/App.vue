@@ -9,7 +9,7 @@ const getJoke = async () => {
   loading.value = true;
   try {
     const response = await axios.get(
-      "https://v2.jokeapi.dev/joke/Miscellaneous,Dark,Pun,Spooky,Christmas?type=single"
+      "https://v2.jokeapi.dev/joke/Pun?type=single"
     );
     joke.value = response.data.joke;
   } catch (error) {
@@ -40,14 +40,16 @@ const getJoke = async () => {
 .container {
   display: flex;
   flex-direction: column;
+  height: 100vh;
   align-items: center;
   justify-content: center;
   background-color: $background-light;
-  height: 100vh;
 }
 
 .joke {
   @include shadow;
+  align-items: center;
+  text-align: center;
   width: 50vh;
   max-width: 400px;
   background-color: $background;
@@ -65,7 +67,8 @@ const getJoke = async () => {
   text-align: center;
   line-height: 2rem;
   font-size: 1.2rem;
-  margin: 2rem 0;
+  transition: all 150ms;
+  margin: 2rem 0rem;
 }
 
 .joke__button {
