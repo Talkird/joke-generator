@@ -38,16 +38,19 @@ const getJoke = async () => {
 @import "./style.scss";
 
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #343434;
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .joke {
   @include shadow;
-  width: 400px;
+  width: 50%;
+  max-width: 400px;
   background-color: $background;
   padding: 5rem;
   border-radius: 1rem;
