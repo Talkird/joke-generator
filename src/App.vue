@@ -42,14 +42,13 @@ const getJoke = async () => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #343434;
+  background-color: $background-light;
   height: 100vh;
-  display: flex;
 }
 
 .joke {
   @include shadow;
-  width: 50%;
+  width: 50vh;
   max-width: 400px;
   background-color: $background;
   padding: 5rem;
