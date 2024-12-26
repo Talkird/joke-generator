@@ -35,8 +35,6 @@ const getJoke = async () => {
 </template>
 
 <style lang="scss" scoped>
-@import "./style.scss";
-
 .container {
   display: flex;
   flex-direction: column;
