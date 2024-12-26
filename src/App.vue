@@ -39,15 +39,15 @@ const getJoke = async () => {
   @include flex-column;
   @include center;
   height: 100vh;
-  background-color: $background-light;
+  background-color: $base-100;
 }
 
 .joke {
-  @include shadow($background, 0.5);
+  @include shadow($base-300, 0.5);
   @include center;
   width: 50vh;
   max-width: 400px;
-  background-color: $background;
+  background-color: $base-300;
   padding: 3rem;
   border-radius: 1rem;
 }
@@ -72,7 +72,7 @@ const getJoke = async () => {
   @include clickable;
   background-color: $primary;
   border: none;
-  color: $background;
+  color: $base-300;
   width: 100%;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
