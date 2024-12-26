@@ -8,7 +8,6 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": "/src",
-      "@components": "/src/components",
       "@styles": "/src/styles",
     },
   },
@@ -18,7 +17,7 @@ export default defineConfig({
       scss: {
         additionalData: `
         @import "@styles/_variables.scss"; 
-        @import "@styles/_mixins.scss";
+        @import "@/styles/_mixins.scss";
         `,
       },
     },
