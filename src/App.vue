@@ -74,6 +74,7 @@ const getJoke = async () => {
   border: none;
   color: $base-300;
   width: 100%;
+  margin: 0.5rem;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
 }
