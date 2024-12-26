@@ -36,61 +36,45 @@ const getJoke = async () => {
 
 <style lang="scss" scoped>
 .container {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
+  @include center;
   height: 100vh;
-  align-items: center;
-  justify-content: center;
   background-color: $background-light;
 }
 
 .joke {
-  @include shadow;
-  align-items: center;
-  text-align: center;
+  @include shadow($background, 0.5);
+  @include center;
   width: 50vh;
   max-width: 400px;
   background-color: $background;
-  padding: 5rem;
+  padding: 3rem;
   border-radius: 1rem;
 }
 
 .joke__title {
-  color: $primary;
+  @include text-title;
   text-align: center;
-  font-size: 3rem;
+  color: $primary;
 }
 
 .joke__text {
+  @include text-body;
+  color: $text;
   text-align: center;
   line-height: 2rem;
-  font-size: 1.2rem;
   transition: all 150ms;
-  margin: 2rem 0rem;
+  margin: 2rem 0;
 }
 
 .joke__button {
+  @include text-body;
+  @include clickable;
   background-color: $primary;
   border: none;
   color: $background;
+  width: 100%;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
-  width: 100%;
-  transition: all 150ms;
-  cursor: pointer;
-  font-size: 1.2rem;
-
-  &:hover {
-    filter: brightness(0.9);
-    scale: 1.02;
-  }
-
-  &:active {
-    scale: 0.95;
-  }
-
-  &:disabled {
-    filter: brightness(0.5);
-  }
 }
 </style>
