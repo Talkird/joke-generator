@@ -38,16 +38,16 @@ const getJoke = async () => {
 .container {
   @include flex-column;
   @include center;
-  height: 100vh;
   background-color: $base-100;
+  height: 100vh;
 }
 
 .joke {
   @include shadow($base-300, 0.5);
   @include center;
+  background-color: $base-300;
   width: 50vh;
   max-width: 400px;
-  background-color: $base-300;
   padding: 3rem;
   border-radius: 1rem;
 }
@@ -70,11 +70,10 @@ const getJoke = async () => {
 .joke__button {
   @include text-body;
   @include clickable;
+  color: $base-300;
   background-color: $primary;
   border: none;
-  color: $base-300;
   width: 100%;
-  margin: 0.5rem;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
 }
